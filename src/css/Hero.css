@@ -1,0 +1,105 @@
+.hero-content { 
+  height: 100vh;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+@media (max-width: 1000px) {
+  .hero-header {
+    scale: 0.9;
+  }
+}
+@media (max-width: 600px) {
+  .hero-header {
+    scale: 0.7;
+  }
+}
+.hero-header {
+  vertical-align: middle;
+  position: absolute;
+  justify-content: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 50%;
+  width: 100%;
+}
+.hero-content .greet {
+  font-size: 2.8rem;
+  animation: fadeIn 1s ease-in-out;
+  text-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+}
+@keyframes fadeIn {
+  0% { opacity: 0; scale: 0; }
+  80% { opacity: 1; scale: 1.1; }
+  100% { opacity: 1; scale: 1; }
+}
+.hero-content .name {
+  font-size: 6rem;
+  font-weight: bold;
+  text-shadow: 1px 1px 10px #00fffb;
+  animation: custom 1.5s ease-in-out;
+}
+
+@keyframes custom {
+  0% { scale: 0.7; transform: translateX(600%);}
+  60% { scale: 0.7; transform: translateX(0%);}
+  90% { scale: 1.1;}
+  100% { scale: 1;}
+}
+.hero-content .foranimation {
+  display: inline-block;
+}
+.hero-content .text {
+  text-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+  font-size: 2.5rem;
+  width: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+  border-right: 3px solid black;
+  animation: typing 2s linear, curser 0.45s step-end infinite alternate;
+}
+@keyframes typing {
+  from { width: 0; }
+}
+@keyframes curser {
+  50% { border-color: transparent; }
+}
+.hero-content .span1 {
+  font-weight: bold;
+}
+.hero-content .navigating {
+  display: flex;
+  align-items: center;
+  flex-grow: 1;
+}
+.hero-content .navigating .logo1, .logo2, .logo3 { 
+  width: 50px;
+  height: 50px;
+  padding: 0px 20px 0px 20px;
+  cursor: pointer;
+  transition: filter 0.3s, scale 0.3s;
+}
+@keyframes animation1 {
+  50% { scale: 1.8;}
+  100% { scale: 1;}
+}
+
+.brandlogo.trigger {
+  animation: animation1 0.4s;
+  animation-iteration-count: 2;
+}
+
+.hero-content .navigating .logo1:hover, .logo1:active{
+  filter: invert(29%) sepia(82%) saturate(5275%) hue-rotate(316deg) brightness(99%) contrast(97%);
+  scale: 1.5;
+}
+.hero-content .navigating .logo2:hover, .logo2:active {
+  filter: invert(41%) sepia(77%) saturate(1677%) hue-rotate(200deg) brightness(97%) contrast(94%);
+  scale: 1.5;
+}
+.hero-content .navigating .logo3:hover,  .logo3:active {
+  scale: 1.5;
+}
+
